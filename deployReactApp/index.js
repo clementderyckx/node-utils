@@ -50,7 +50,7 @@ const mode = 'dev';
         console.log( (deployBuild.result) ? deployBuild.result : deployBuild.message )
 
 
-        const pathToCheck = (mode === "dev") ? `${repo.path}/index.html` : `https://${repo.path}.fr/`;
+        const pathToCheck = (mode === "dev") ? `${repo.path}/index.html` : `https://${repo.name}/`;
         console.log(`${repo.name} is now deployed in ${destination.name} \n you can check out at ${pathToCheck}`);
 
     }

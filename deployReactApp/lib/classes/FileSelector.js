@@ -1,5 +1,4 @@
 const fs = require('fs');
-const inquirer = import('inquirer');
 const Folder = require(`${__dirname}/Folder.js`);
 const Cli = require(`${__dirname}/Cli.js`);
 
