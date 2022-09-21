@@ -1,15 +1,14 @@
-const FileSelector = require(`${__dirname}/lib/classes/FileSelector.js`);
-const Cli = require(`${__dirname}/lib/classes/Cli.js`);
-const utils = require(`${__dirname}/lib/utils.js`);
+const FileSelector = require(`${__dirname}/../lib/classes/FileSelector.js`);
+const Cli = require(`${__dirname}/../lib/classes/Cli.js`);
+const utils = require(`${__dirname}/../lib/utils.js`);
 const fs = require('fs');
 
 const mode = 'dev';
 
 ( async() => {
   
-    const repoSelector = new FileSelector();
-    const repo = await repoSelector.chooseFolder(`${__dirname}/../../repos/`, { name: 'repo', message: 'Please, choose the repository to deploy' });
-    const destination = await repoSelector.chooseFolder(`${__dirname}/../../../`, { name: 'destination', message: 'Please, choose the base folder to deploy to' });
+    const repo = await FileSelector.chooseFolder(`${__dirname}/../../repos/`, { name: 'repo', message: 'Please, choose the repository to deploy' });
+    const destination = await FileSelector.chooseFolder(`${__dirname}/../../../`, { name: 'destination', message: 'Please, choose the base folder to deploy to' });
 
     // Ask confirmation to deploy the right depo in the right destination
     const confimChoices = await Cli.promptConfirm('confirmChoices', `Are you sure you want to deploy ${repo.name} to ${destination.name}?`);
