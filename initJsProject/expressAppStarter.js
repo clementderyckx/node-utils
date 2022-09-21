@@ -12,8 +12,6 @@ const rootRouter = require(`${__dirname}/router/rootRouter.js`);
 app.use( express.json() );
 app.use( express.urlencoded() );
 app.use( cors() );
-app.use( fileUpload() );
-app.use( '/files', express.static(`${__dirname}/files`) );
 app.use( '/static', express.static(`${__dirname}/docs`) );
 
 // Router declarations

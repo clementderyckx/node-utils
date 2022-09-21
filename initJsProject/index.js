@@ -30,7 +30,7 @@ const projectFolder = `${process.env.PROJECTFOLDER}/javascript`;
     await Files.createFolder(`${projectFolder}/${foldername.name}/backend`);
     const cwd = `${projectFolder}/${foldername.name}/backend`;
 
-    const folders = ['rooter', 'lib', 'lib/classes', 'lib/db'];
+    const folders = ['router', 'static', 'lib', 'lib/classes', 'lib/db'];
     const files = ['.env', '.gitignore'];
     const commands = ['npm init -y', 'npm install dotenv express cors mongoose'];
 
@@ -49,7 +49,7 @@ const projectFolder = `${process.env.PROJECTFOLDER}/javascript`;
     }
 
     Files.duplicateTextFile(`${__dirname}/expressAppStarter.js`, `${cwd}/index.js`);
-    Files.duplicateTextFile(`${__dirname}/expressRootRouter.js`, `${cwd}/rooter/rootRouter.js`);
+    Files.duplicateTextFile(`${__dirname}/expressRootRouter.js`, `${cwd}/router/rootRouter.js`);
     return result;
 
 
