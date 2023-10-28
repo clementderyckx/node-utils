@@ -1,0 +1,16 @@
+{
+  "name": "utils-automation",
+  "version": "1.0.0",
+  "description": "utilities scripts for repetitive tasks i do in my job",
+  "main": "index.js",
+  "author": "Clement Deryckx",
+  "license": "MIT",
+  "scripts": {
+    "sandbox": "ts-node src/sandbox.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.8.9",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2"
+  }
+}
